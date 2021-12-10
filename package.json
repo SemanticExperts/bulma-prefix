@@ -1,8 +1,8 @@
 {
-  "name": "bulma-prefix",
-  "version": "0.9.3",
+  "name": "@SemanticExperts/bulma-prefix",
+  "version": "0.9.3-20211210",
   "description": "Bulma CSS framework with bulma as css prefix",
-  "homepage": "https://github.com/brandonfl/bulma-prefix",
+  "homepage": "https://github.com/SemanticExperts/bulma-prefix",
   "main": "css/bulma.prefixed.css",
   "unpkg": "css/bulma.prefixed.css",
   "style": "bulma-prefix/css/bulma.prefixed.min.css",
@@ -14,12 +14,17 @@
     "url": "https://brandon.fontany-legall.xyz/"
   },
   "contributors": [
-    {"name":"Arjan","url":"https://github.com/creativesuspects"},
-    {"name":"Lucian Last"}
+    {
+      "name": "Arjan",
+      "url": "https://github.com/creativesuspects"
+    },
+    {
+      "name": "Lucian Last"
+    }
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brandonfl/bulma-prefix.git"
+    "url": "git+https://github.com/SemanticExperts/bulma-prefix.git"
   },
   "license": "MIT",
   "keywords": [
@@ -32,7 +37,7 @@
     "prefix"
   ],
   "bugs": {
-    "url": "https://github.com/brandonfl/bulma-prefix/issues"
+    "url": "https://github.com/SemanticExperts/bulma-prefix/issues"
   },
   "dependencies": {},
   "devDependencies": {
@@ -48,7 +53,7 @@
   "scripts": {
     "build": "npm run clean && npm run sass && npm run autoprefix && npm run cleancss && npm run prefix && npm run prefix-cleancss && npm run prefix-sourcemap",
     "clean": "rimraf css",
-    "sass": "node-sass --output-style expanded --source-map true node_modules/bulma/bulma.sass css/bulma.css",
+    "sass": "node-sass --output-style expanded --source-map true bulma-custom.sass css/bulma.css",
     "autoprefix": "postcss --use autoprefixer --map false --output css/bulma.css css/bulma.css --verbose",
     "cleancss": "cleancss -o css/bulma.min.css css/bulma.css",
     "prefix": "postcss --no-map --output css/bulma.prefixed.css css/bulma.css --verbose",
